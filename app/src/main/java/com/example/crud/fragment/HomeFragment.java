@@ -123,11 +123,12 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    public void sair(MenuItem item){
+    public void sair(){
         SharedPreferences settings = Objects.requireNonNull(getActivity()).getSharedPreferences(PrefsConstants.PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.remove(PrefsConstants.NOME_USER);
-        editor.apply();
+        editor.remove(PrefsConstants.ID_USER);
+        editor.commit();
         abrirLogin();
 
     }
@@ -147,6 +148,7 @@ public class HomeFragment extends Fragment {
     public void abrirLogin() {
         Intent intent = new Intent(getActivity(), LoginActivity.class);
         startActivity(intent);
+        getActivity().finish();
     }
 
 
@@ -208,7 +210,7 @@ public class HomeFragment extends Fragment {
                 cadastrar(item);
                 return true;
             case R.id.menu_bar_sair:
-                sair(item);
+                sair();
                 return true;
         }
         return super.onOptionsItemSelected(item);
