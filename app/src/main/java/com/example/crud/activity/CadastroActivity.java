@@ -53,6 +53,7 @@ public class CadastroActivity extends AppCompatActivity {
                 usuario.setSenha(senha.getText().toString());
                 dao.inserir(usuario);
                 Toast.makeText(this, getString(R.string.cadastro_sucesso), Toast.LENGTH_LONG).show();
+                finish();
             } else {
                 usuario.setEmail(email.getText().toString());
                 usuario.setNome(nome.getText().toString());

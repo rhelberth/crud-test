@@ -116,7 +116,7 @@ public class HomeFragment extends Fragment {
                             usuarios.remove(usuarioExcluir);
                             dao.delete(usuarioExcluir);
                             listView.invalidateViews();
-                            Toast.makeText(getActivity(), usuarioExcluir.getNome() + getString(R.string.removido_sucesso), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), usuarioExcluir.getNome() + " " + getString(R.string.removido_sucesso), Toast.LENGTH_LONG).show();
                         }
                     }).create();
             dialog.show();
