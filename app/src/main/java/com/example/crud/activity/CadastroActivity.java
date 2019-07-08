@@ -52,14 +52,14 @@ public class CadastroActivity extends AppCompatActivity {
                 usuario.setNome(nome.getText().toString());
                 usuario.setSenha(senha.getText().toString());
                 dao.inserir(usuario);
-                Toast.makeText(this, "Cadastro realizado com sucesso!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.cadastro_sucesso), Toast.LENGTH_LONG).show();
             } else {
                 usuario.setEmail(email.getText().toString());
                 usuario.setNome(nome.getText().toString());
                 usuario.setSenha(senha.getText().toString());
                 dao.atualizar(usuario);
                 atualizaNomeUsuarioLogado(usuario);
-                Toast.makeText(this, "Alteração realizado com sucesso!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.alteracao_sucesso), Toast.LENGTH_LONG).show();
             }
 
 
@@ -86,7 +86,7 @@ public class CadastroActivity extends AppCompatActivity {
             senha.setError(getString(R.string.campo_vazio));
             return false;
         } else if (!email.getText().toString().contains("@")){
-            email.setError("Formato do email invalido");
+            email.setError(getString(R.string.formato_email_invalido));
             return false;
         } else
             return true;

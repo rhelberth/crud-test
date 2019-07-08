@@ -15,8 +15,8 @@ public class AlbumViewHolder extends RecyclerView.ViewHolder {
 
     public AlbumViewHolder(View view) {
         super(view);
-        titulo = (TextView) view.findViewById(R.id.txt_titulo_album);
-        thumbnail = (ImageView) view.findViewById(R.id.img_thumb_album);
+        titulo = view.findViewById(R.id.txt_titulo_album);
+        thumbnail = view.findViewById(R.id.img_thumb_album);
     }
 
 }

@@ -23,6 +23,6 @@ public class Conexao extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        //necessaria implementacao quando o banco troca de versão
+        //necessaria implementacao caso o banco troque de versão
     }
 }

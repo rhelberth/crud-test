@@ -18,6 +18,18 @@
     <string name="album">Album</string>
     <string name="image">image</string>
     <string name="titulo">Titulo</string>
+    <string name="alteracao_sucesso">Alteração realizado com sucesso!!</string>
+    <string name="cadastro_sucesso">Cadastro realizado com sucesso!!</string>
+    <string name="formato_email_invalido">Formato do email invalido</string>
+    <string name="email_senha_invalido">Email ou senha invalidos</string>
+    <string name="carregando">Carregando....</string>
+    <string name="algo_errado_requisicao">Algo deu errado na sua requisição</string>
+    <string name="nao_possivel_excluir_logado">Não é possível excluir o usuario logado</string>
+    <string name="atencao">Atenção</string>
+    <string name="realemente_excluir">Realmente deseja excluir o usuario?</string>
+    <string name="nao">Não</string>
+    <string name="sim">SIM</string>
+    <string name="removido_sucesso">removido com sucesso!</string>
 
 
 </resources>

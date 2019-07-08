@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Infla layout
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         setHasOptionsMenu(true);
 
@@ -102,21 +102,21 @@ public class HomeFragment extends Fragment {
         final Usuario usuarioExcluir = usuariosFiltro.get(menuInfo.position);
 
         if (usuarioExcluir.getId().equals(idUser)){
-            Toast.makeText(getActivity(), "Não é possível excluir o usuario logado", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), getString(R.string.nao_possivel_excluir_logado), Toast.LENGTH_LONG).show();
         }else {
 
             AlertDialog dialog = new AlertDialog.Builder(Objects.requireNonNull(getActivity()))
-                    .setTitle("Atenção")
-                    .setMessage("Realmente deseja excluir o usuario?")
-                    .setNegativeButton("Não", null)
-                    .setPositiveButton("SIM", new DialogInterface.OnClickListener() {
+                    .setTitle(getString(R.string.atencao))
+                    .setMessage(getString(R.string.realemente_excluir))
+                    .setNegativeButton(getString(R.string.nao), null)
+                    .setPositiveButton(getString(R.string.sim), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             usuariosFiltro.remove(usuarioExcluir);
                             usuarios.remove(usuarioExcluir);
                             dao.delete(usuarioExcluir);
                             listView.invalidateViews();
-                            Toast.makeText(getActivity(), usuarioExcluir.getNome() + " removido com sucesso!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), usuarioExcluir.getNome() + getString(R.string.removido_sucesso), Toast.LENGTH_LONG).show();
                         }
                     }).create();
             dialog.show();

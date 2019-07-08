@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.crud.R;
 import com.example.crud.adapter.AlbumAdapter;
@@ -42,7 +43,7 @@ public class AlbumFragment extends Fragment {
 
         // Monta o progress
         progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Carregando....");
+        progressDialog.setMessage(getString(R.string.carregando));
         progressDialog.show();
 
         recyclerView = view.findViewById(R.id.recycler);
@@ -67,7 +68,7 @@ public class AlbumFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Album>> call, Throwable t) {
-                Log.e("Album   ", "Erro ao buscar o Album:" + t.getMessage());
+                Toast.makeText(getActivity(), getString(R.string.algo_errado_requisicao),Toast.LENGTH_LONG).show();
             }
         });
     }

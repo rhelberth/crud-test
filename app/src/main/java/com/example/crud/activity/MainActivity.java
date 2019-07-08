@@ -1,27 +1,15 @@
 package com.example.crud.activity;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.annotation.NonNull;
-import android.view.ContextMenu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.crud.R;
 import com.example.crud.fragment.AlbumFragment;
 import com.example.crud.fragment.HomeFragment;
-import com.example.crud.model.Usuario;
-
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 

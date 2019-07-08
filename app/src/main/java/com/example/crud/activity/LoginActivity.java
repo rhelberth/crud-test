@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
             setaUsuarioLogado(usuarioLogado);
             abrirHome();
         }else{
-            Toast.makeText(this, "Email ou senha invalidos", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.email_senha_invalido), Toast.LENGTH_LONG).show();
         }
 
     }
